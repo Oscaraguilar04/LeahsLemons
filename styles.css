@@ -582,6 +582,7 @@ h3 {
 
 .feature-card,
 .menu-card,
+.photo-card,
 .deli-cup-card,
 .package-card,
 .story-card,
@@ -677,6 +678,26 @@ h3 {
   grid-template-columns: minmax(0, 1.12fr) minmax(330px, 0.88fr);
   gap: 1.25rem;
   align-items: stretch;
+}
+
+.photo-card {
+  display: grid;
+  overflow: hidden;
+}
+
+.flavor-photo,
+.deli-cup-photo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.flavor-photo {
+  height: min(58vw, 470px);
+  min-height: 360px;
+}
+
+.photo-caption {
+  padding: clamp(1.2rem, 3vw, 1.65rem);
 }
 
 .syrup-shelf {
@@ -829,6 +850,14 @@ h3 {
   background:
     radial-gradient(circle at 88% 16%, rgba(146, 191, 116, 0.35) 0 16%, transparent 17%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 249, 233, 0.82));
+}
+
+.deli-cup-photo {
+  max-width: 360px;
+  height: 410px;
+  border: 3px solid rgba(59, 42, 35, 0.14);
+  border-radius: 26px;
+  box-shadow: 10px 12px 0 rgba(249, 183, 201, 0.36);
 }
 
 .deli-cup {
