@@ -3,15 +3,24 @@
   --citrus-gold: #f4b400;
   --fresh-green: #8bc34a;
   --green-dark: #507a24;
+  --pink-50: #fff7fa;
+  --pink-75: #fff1f6;
+  --pink-100: #ffe7f0;
+  --pink-200: #ffd1df;
+  --pink-300: #ffabc4;
+  --rose: #d94f7d;
+  --rose-dark: #9d2f58;
   --charcoal: #171717;
   --soft-black: #2a2a2a;
   --text-muted: #676767;
   --white: #ffffff;
-  --cream: #fff9e8;
-  --light-gray: #f5f5f5;
-  --border: #e7e2d8;
-  --shadow-sm: 0 14px 34px rgba(23, 23, 23, 0.08);
-  --shadow-md: 0 24px 70px rgba(23, 23, 23, 0.14);
+  --cream: #fff3f7;
+  --light-gray: #fff0f5;
+  --section-pink: #ffeaf2;
+  --card-bg: rgba(255, 255, 255, 0.86);
+  --border: #f1cbd8;
+  --shadow-sm: 0 14px 34px rgba(157, 47, 88, 0.1);
+  --shadow-md: 0 24px 70px rgba(157, 47, 88, 0.16);
   --radius-lg: 30px;
   --radius-md: 22px;
   --radius-sm: 14px;
@@ -30,7 +39,10 @@ body {
   margin: 0;
   color: var(--charcoal);
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--white);
+  background:
+    radial-gradient(circle at 12% 6%, rgba(255, 209, 223, 0.78), transparent 26rem),
+    radial-gradient(circle at 88% 18%, rgba(255, 216, 77, 0.24), transparent 22rem),
+    linear-gradient(180deg, var(--pink-50) 0%, var(--pink-75) 46%, var(--pink-100) 100%);
 }
 
 body::selection {
@@ -94,8 +106,8 @@ textarea {
   top: 0;
   z-index: 50;
   padding: 0.8rem 1rem;
-  background: rgba(255, 255, 255, 0.88);
-  border-bottom: 1px solid rgba(231, 226, 216, 0.75);
+  background: rgba(255, 241, 246, 0.9);
+  border-bottom: 1px solid rgba(241, 203, 216, 0.85);
   backdrop-filter: blur(20px);
 }
 
@@ -124,10 +136,10 @@ textarea {
   font-family: "Manrope", sans-serif;
   font-weight: 900;
   letter-spacing: -0.08em;
-  background: linear-gradient(135deg, var(--lemon-yellow), #fff2a3);
+  background: linear-gradient(135deg, var(--lemon-yellow), var(--pink-200));
   border: 1px solid rgba(23, 23, 23, 0.12);
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(244, 180, 0, 0.28);
+  box-shadow: 0 8px 20px rgba(217, 79, 125, 0.2);
 }
 
 .brand strong {
@@ -169,7 +181,7 @@ textarea {
 .nav-links a:hover,
 .nav-links a:focus-visible {
   color: var(--charcoal);
-  background: var(--cream);
+  background: var(--pink-200);
   outline: none;
 }
 
@@ -242,7 +254,7 @@ textarea {
   align-items: center;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.34) 55%, rgba(0, 0, 0, 0.14)),
+    linear-gradient(90deg, rgba(55, 10, 31, 0.82), rgba(80, 16, 43, 0.44) 55%, rgba(80, 16, 43, 0.18)),
     url("assets/hero-bakersfield-event-lemonade.png") center / cover;
 }
 
@@ -251,8 +263,9 @@ textarea {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 20% 22%, rgba(255, 216, 77, 0.22), transparent 28rem),
-    linear-gradient(180deg, transparent 70%, rgba(255, 255, 255, 0.08));
+    radial-gradient(circle at 20% 22%, rgba(255, 171, 196, 0.34), transparent 28rem),
+    radial-gradient(circle at 44% 16%, rgba(255, 216, 77, 0.18), transparent 24rem),
+    linear-gradient(180deg, transparent 70%, rgba(255, 241, 246, 0.12));
 }
 
 .hero-content {
@@ -265,7 +278,7 @@ textarea {
 
 .eyebrow {
   margin: 0 0 0.95rem;
-  color: var(--green-dark);
+  color: var(--rose-dark);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -369,7 +382,7 @@ h3 {
 
 .proof-bar article {
   padding: clamp(1rem, 3vw, 1.45rem);
-  background: var(--white);
+  background: var(--card-bg);
 }
 
 .proof-bar strong {
@@ -447,7 +460,7 @@ h3 {
 .readiness-card,
 .faq-item,
 .testimonial-card {
-  background: var(--white);
+  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
@@ -493,7 +506,9 @@ h3 {
 .menu-section,
 .testimonials-section,
 .booking-section {
-  background: var(--light-gray);
+  background:
+    radial-gradient(circle at 90% 8%, rgba(255, 209, 223, 0.52), transparent 18rem),
+    linear-gradient(180deg, var(--section-pink), var(--pink-75));
 }
 
 .gallery-grid {
@@ -560,7 +575,7 @@ h3 {
 .audience-grid a {
   display: inline-flex;
   margin-top: 0.9rem;
-  color: var(--green-dark);
+  color: var(--rose-dark);
   font-weight: 900;
 }
 
@@ -606,7 +621,7 @@ h3 {
   align-items: center;
   margin-top: 1rem;
   padding: clamp(1rem, 3vw, 1.3rem);
-  background: var(--white);
+  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -672,7 +687,7 @@ h3 {
   padding: 0.65rem 0.9rem;
   color: var(--charcoal);
   font-weight: 900;
-  background: var(--white);
+  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 999px;
   cursor: pointer;
@@ -730,8 +745,8 @@ h3 {
   align-items: center;
   padding: clamp(1.4rem, 5vw, 3rem);
   background:
-    radial-gradient(circle at 88% 18%, rgba(255, 216, 77, 0.24), transparent 17rem),
-    var(--charcoal);
+    radial-gradient(circle at 88% 18%, rgba(255, 171, 196, 0.28), transparent 17rem),
+    linear-gradient(135deg, #261019, var(--charcoal));
 }
 
 .readiness-card h2,
@@ -775,7 +790,7 @@ h3 {
   color: var(--charcoal);
   font-weight: 900;
   text-align: left;
-  background: var(--white);
+  background: var(--card-bg);
   border: 0;
   cursor: pointer;
 }
@@ -822,7 +837,7 @@ h3 {
 
 .final-cta {
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.42)),
+    linear-gradient(90deg, rgba(55, 10, 31, 0.84), rgba(80, 16, 43, 0.52)),
     url("assets/hero-bakersfield-event-lemonade.png") center / cover fixed;
 }
 
@@ -859,7 +874,7 @@ h3 {
   gap: 0.35rem;
   padding: 1rem;
   margin-top: 1.25rem;
-  background: var(--white);
+  background: var(--card-bg);
 }
 
 .booking-mini-card strong {
@@ -886,8 +901,8 @@ h3 {
   width: 100%;
   padding: 0.92rem 1rem;
   color: var(--charcoal);
-  background: #fbfbfb;
-  border: 1px solid #dcdcdc;
+  background: var(--pink-50);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   outline: none;
   transition:
@@ -900,8 +915,8 @@ h3 {
 .booking-form select:focus,
 .booking-form textarea:focus {
   background: var(--white);
-  border-color: var(--citrus-gold);
-  box-shadow: 0 0 0 4px rgba(255, 216, 77, 0.24);
+  border-color: var(--rose);
+  box-shadow: 0 0 0 4px rgba(217, 79, 125, 0.16);
 }
 
 .booking-form textarea {
@@ -918,7 +933,7 @@ h3 {
 }
 
 .form-note a {
-  color: var(--green-dark);
+  color: var(--rose-dark);
   font-weight: 900;
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -927,7 +942,7 @@ h3 {
 .site-footer {
   padding: clamp(3rem, 7vw, 5rem) 0 1.2rem;
   color: var(--white);
-  background: var(--charcoal);
+  background: linear-gradient(135deg, #231017, var(--charcoal));
 }
 
 .footer-grid {
@@ -1016,7 +1031,7 @@ h3 {
     flex-direction: column;
     align-items: stretch;
     padding: 0.7rem;
-    background: var(--white);
+    background: var(--pink-50);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
