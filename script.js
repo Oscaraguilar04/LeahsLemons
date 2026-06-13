@@ -92,7 +92,7 @@ if (bookingForm && formNote) {
       ].join("\n"),
     );
 
-    window.location.href = `mailto:bookings@leahslemons.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:leahslemons2025@gmail.com?subject=${subject}&body=${body}`;
     formNote.textContent = "Your booking email is ready to send. Leah's Lemons will follow up with availability and event details.";
   });
 }
